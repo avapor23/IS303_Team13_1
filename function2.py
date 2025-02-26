@@ -15,6 +15,6 @@ def displayMenu():
             else:
                 print('\nInvalid choice. Pleases enter 1, 2, or 3.')
         except ValueError:
-            print("\nInvalid input. Please enter a number (1, 2, or 3).")
+            print("\nInvalid input. Please enter a number between 1 and 3.")
 
-displayMenu()
+choice = displayMenu()
