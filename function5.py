@@ -8,6 +8,9 @@ def FinalRecord(iTotalGames,dScores):
         #display each game's scores
         print(f"{dScores[iCount][0]}'s score : {dScores[iCount][1]} | {dScores[iCount][2]}'s score : {dScores[iCount][3]}")
 
+        # initialize variable
+        iTotalWins = 0
+
         #determine the home team's total wins
         if dScores[iCount][4] == "W" :
             iTotalWins = iTotalWins + 1
@@ -24,5 +27,5 @@ def FinalRecord(iTotalGames,dScores):
         print("You had a good season.")
     else:
         print("Your team needs to practice!")
-        
+
 
