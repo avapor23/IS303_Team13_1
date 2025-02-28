@@ -10,7 +10,7 @@ def display_intro():
     """
     print("Welcome to the Women's Soccer Season Simulator!")
     print("In this game, you will play through a season of women's soccer matches.")
-    print("Your choices and strategies will impact the outcomes of the games!")
+    print("Your choices and strategies will impact the outcomes of the games.")
     print("Let's get started!\n")
     
     # Prompt for player's name
