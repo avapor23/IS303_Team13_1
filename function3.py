@@ -1,32 +1,34 @@
-#Ava Porter
-#Function 3
+'''
+Ava Porter
+Section 004: P2
+02 / 27 / 2025
 
-#Function that:
-# 1. Determines if a team has already been selected or not
-# 2. Creates a list of available teams the user can select from
-# 3. Determines what team the user has selected and return it
+TASK 3:
+Function that:
+    1. Determines if a team has already been selected or not
+    2. Creates a list of available teams the user can select from
+    3. Determines what team the user has selected and return it
 
-#note: in order to get the function to NOT include a previously selected team, you must pass the variable that contains that team name THROUGH the function
-#example: selectTeams("Brigham Young University")
-#the list generated from that line of code above WILL NOT INCLUDE Brigham Young University
+NOTE: in order to get the function to NOT include a previously selected team, you must pass the variable that contains that team name THROUGH the function
+    Example: selectTeams("Brigham Young University")
+    ^ the list generated from that line of code above WILL NOT INCLUDE Brigham Young University
+'''
 
-
-
-def selectTeams(parameter=None) : #parameter=None is there in case no parameter is passed through the function, meaning no team has been selected previously
+def selectTeams(sHomeTeam=None) : #parameter=None is there in case no parameter is passed through the function, meaning no team has been selected previously
 
     #determine if a home team has been selected or not and generate the list of available teams
-    if parameter is None:
+    if sHomeTeam is None:
         #no home team has been selected, so we need the full list
         dAvailableTeams = {1: "Brigham Young University", 2: "Utah State University", 3: "Utah Valley University", 4: "University of Utah"}
     else:
         #a home team has been selected, so we need to modify the list
-        if parameter == "Brigham Young University" :
+        if sHomeTeam == "Brigham Young University" :
             dAvailableTeams = {2: "Utah State University", 3: "Utah Valley University", 4: "University of Utah"}
-        elif parameter == "Utah State University" :
+        elif sHomeTeam == "Utah State University" :
             dAvailableTeams = {1: "Brigham Young University", 3: "Utah Valley University", 4: "University of Utah"}
-        elif parameter == "Utah Valley University" :
+        elif sHomeTeam == "Utah Valley University" :
             dAvailableTeams = {1: "Brigham Young University", 2: "Utah State University", 4: "University of Utah"}
-        elif parameter == "University of Utah" :
+        elif sHomeTeam == "University of Utah" :
             dAvailableTeams = {1: "Brigham Young University", 2: "Utah State University",3: "Utah Valley University"}
     
     #display the menu
