@@ -1,18 +1,23 @@
-# Chloe DePierro
-# Function 5
-# Receives the home team data, displays results of each game, final season record, and final statement
+'''
+Chloe DePierro
+Section 004: P2
+02 / 28 / 2025
 
-def FinalRecord(iTotalGames,dScores):
+TASK 5:
+Receives the home team data, displays results of each game, final season record, and final statement
+'''
+
+def finalRecord(iTotalGames,dScores):
     #print the results for each game
-    for iCount in range(iTotalGames) : 
+    for game in dScores : 
         #display each game's scores
-        print(f"{dScores[iCount][0]}'s score : {dScores[iCount][1]} | {dScores[iCount][2]}'s score : {dScores[iCount][3]}")
+        print(f"{dScores[game][0]}'s score : {dScores[game][1]} | {dScores[game][2]}'s score : {dScores[game][3]}")
 
         # initialize variable
         iTotalWins = 0
 
         #determine the home team's total wins
-        if dScores[iCount][4] == "W" :
+        if dScores[game][4] == "W" :
             iTotalWins = iTotalWins + 1
 
     #print the team final season record
