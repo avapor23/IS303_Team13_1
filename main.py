@@ -17,8 +17,11 @@ dictGameResults = {}
 
 # Introduces the game and sets the player name
 playerName = displayIntro()
-print("\nFirst, let's pick your home team!")
-homeTeam = selectTeams()
+print("First, let's pick your home team!")
+homeTeamSelection = selectTeams()
+homeTeam = homeTeamSelection[0]
+availableOpponents = homeTeamSelection[1]
+print(f"You have chosen {homeTeam}!")
 totalGameCount = 0
 
 # Displays options for player to pick from
@@ -31,8 +34,8 @@ nextAction = displayMenu()
 while nextAction != 3 :
     if nextAction == 1 :
         print("Who are you playing against?")
-        awayTeam = selectTeams(homeTeam)
-        dictGameResults[homeTeam] = generateScores(homeTeam, awayTeam)
+        awayTeam = selectTeams(availableOpponents)[0]
+        dictGameResults[totalGameCount] = generateScores(homeTeam, awayTeam)
         totalGameCount += 1
     if nextAction == 2 :
         finalRecord(totalGameCount, dictGameResults)
