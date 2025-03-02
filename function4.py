@@ -24,8 +24,11 @@ def generateScores(sTeam, sOpponent) :
     #determine if the home team won or loss the game
     if iOpponentTeamScore > iHomeTeamScore :
         sResult = "L"
+        print(f"\nYou Lost!")
     else :
         sResult = "W"
+        print(f"\nYou Win!")
 
+    print(f"{sTeam}'s score : {iHomeTeamScore} | {sOpponent}'s score : {iOpponentTeamScore}")
     #return all of the data in the form of a list
     return [sTeam,iHomeTeamScore,sOpponent,iOpponentTeamScore,sResult]
